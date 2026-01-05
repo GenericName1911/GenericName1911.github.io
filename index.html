@@ -1,10 +1,105 @@
 <!DOCTYPE html>
-<html>
-	<head>
-	<title>TEST HTML FILE</title>
-	</head>
-	
-	<body>
-		<h1>ERROR: Site under construction :(</h1>
-	</body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maintenance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --bg: #0b0b0d;
+            --card: #141418;
+            --text: #ffffff;
+            --muted: #b3b3b8;
+            --accent: rgb(216, 28, 94);
+            --accent-hover: rgb(185, 22, 80);
+            --border: #1f1f26;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100svh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: clamp(16px, 4vw, 40px);
+            background:
+                radial-gradient(700px 360px at 50% 0%, rgba(216, 28, 94, 0.18), transparent 60%),
+                var(--bg);
+            color: var(--text);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+        }
+
+        .wrap {
+            width: 100%;
+            max-width: 560px;
+            padding: clamp(24px, 5vw, 40px);
+            background: linear-gradient(180deg, #181820, var(--card));
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            text-align: center;
+            box-shadow:
+                0 14px 50px rgba(0, 0, 0, 0.7),
+                inset 0 1px 0 rgba(255, 255, 255, 0.03);
+        }
+
+        h1 {
+            margin: 0 0 14px;
+            font-size: clamp(1.6rem, 4.5vw, 2.3rem);
+            letter-spacing: -0.6px;
+        }
+
+        p {
+            margin: 0 0 32px;
+            font-size: clamp(0.95rem, 3.5vw, 1.05rem);
+            line-height: 1.65;
+            color: var(--muted);
+        }
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 320px;
+            padding: 14px 28px;
+            background: linear-gradient(180deg, var(--accent), rgb(190, 24, 82));
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 10px;
+            box-shadow:
+                0 8px 26px rgba(216, 28, 94, 0.45);
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+        }
+
+        a:hover {
+            background: linear-gradient(180deg, var(--accent-hover), rgb(160, 18, 70));
+            transform: translateY(-1px);
+            box-shadow:
+                0 12px 34px rgba(216, 28, 94, 0.6);
+        }
+
+        @media (max-width: 360px) {
+            p {
+                margin-bottom: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>Scheduled Maintenance</h1>
+        <p>
+            The website is offline while essential updates are being deployed.
+            Service will resume shortly.
+        </p>
+        <a href="https://discord.gg/6GBvYSqNN8" target="_blank" rel="noopener">
+            Discord Status & Updates
+        </a>
+    </div>
+</body>
 </html>
